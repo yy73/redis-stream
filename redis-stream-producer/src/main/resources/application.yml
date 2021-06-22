@@ -1,0 +1,22 @@
+server:
+  port: 8081
+
+
+spring:
+  redis:
+    database: 1
+    host: 192.168.174.130
+    password:
+    timeout: 200000
+    lettuce:
+      pool:
+        max-active: 8
+        max-wait: -1
+        max-idle: 8
+        min-idle: 0
+
+# 配置redis-stream  # stream对应 key  # 消费者组 名称 # 消费者
+redis:
+  streamKey: test
+  group: testGroup
+  name: consumer-1
